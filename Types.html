@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Java&mdash; Inheritance In Java</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1">
+						<div id="fh5co-logo"><a href="index.html">ITGR12<span>.</span></a></div>
+					</div>
+					<div class="col-xs-11 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="Basics.html">Basics</a></li>
+							<li><a href="Types.html">Types</a></li>
+							<li class="has-dropdown">
+								<a href="MethodOverriding.html">MethodOverriding</a>
+								<ul class="dropdown">
+									<li><a href="MethodOverriding.html">Rules for implementation</a></li>
+									<li><a href="#MethodOverriding.html">Example</a></li>
+									<li><a href="#MethodOverriding.html">Super Keyword</a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</li>
+							<li><a href="DynamicMethodDispatch.html">DynamicMethodDispatch</a></li>
+						
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_3.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1><b>Types Of Inheritance</b></h1>
+							<h2>Presented By Group-12 IT-G2<a href="http://freehtml5.co" target="_blank"></a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<div id="fh5co-explore" class="fh5co-bg-section">
+	<div class="container">
+			<div class="row animate-box">
+					
+					<h3><b>Types Of Inheritance</b></h3>
+					<div style="align-content:justify; ">
+						<p>
+							A class can inherit the properties and methods from various classes like one superclass for subclass or more than one subclass for a superclass or nested subclasses for a superclass . Java provides various types of inheritance such as 
+							<li>Single Inheritance </li>
+							<li>Multilevel Inheritance </li>
+							<li>Hierarchical Inheritance </li>
+							<br>
+							<p>
+							Java does not support multiple inheritance . Multiple inheritance leads to ambiguous problems . Instead of multiple inheritance Java uses interfaces to implement multiple inheritance.
+							</p> 
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+
+	<div class="container">
+			<div class="row animate-box">
+					
+					<h4><b>Single Inheritance</b></h4>
+					<div style="align-content:justify; ">
+						<p>
+							The properties and methods of a base class are derived by a subclass and this is called single inheritance . To derive the data members and methods of the baseclass , a subclass uses extends keyword in the class declaration statement. The flow diagram shows that class B extends only one class which is A. Here A is a parent class of B and B would be  a child class of A.
+							<br>
+							<h3>The general form of single inheritance is:</h3>
+							<pre>
+Class baseclass
+{
+	……………………..
+	……………………..
+}
+Class subclass extends baseclass
+{
+	……………………..
+	……………………..
+
+}
+							</pre>
+							<h3>Example:</h3>
+							<pre>
+class Animal
+{  
+ 	void eat()
+	{
+		System.out.println("eating");
+	}  
+}  
+class Dog extends Animal
+{  
+ 	void bark()
+	{
+		System.out.println("barking");
+	}  
+}  
+class TestInheritance
+{  
+ 	public static void main(String args[])
+	{  
+    	Dog d=new Dog();  
+    	d.bark();  
+   		d.eat();  
+    }
+}  
+<br>
+<b>Output:</b>
+barking
+eating
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+
+		<div class="container">
+			<div class="row animate-box">
+					
+					<h4><b>Multilevel Inheritance</b></h4>
+					<div style="align-content:justify; ">
+						<p>
+							Here the base class is derived by the subclass and the derived class inherited by another subclass one after another . It is a ladder or hierarchy of single level inheritance . Multiple classes are involved in inheritance but one class extends only one class . The lowermost subclass can make use of all its superclass members . As you can see in below flow diagram C is subclass or child class of B and B is a child class of A.
+							<br>
+							<h3>The general form of multilevel inheritance is:</h3>
+							<pre>
+Class baseclass
+{
+	……………………..
+}
+Class subclass1 extends baseclass
+{
+	……………………..
+}
+Class subclass2 extends subclass1
+{
+	……………………..
+}
+
+							</pre>
+							<h3>Example:</h3>
+							<pre>
+class Animal
+{  
+	void eat()
+	{
+		System.out.println("eating");
+	}  
+}  
+class Dog extends Animal
+{  
+	void bark()
+	{
+		System.out.println("barking");
+	}  
+}  
+class BabyDog extends Dog
+{  
+	void sit()
+	{
+		System.out.println("sit");
+	}  
+}  
+class TestInheritance2
+{  
+	public static void main(String args[])
+	{  
+		BabyDog d=new BabyDog();  
+		d.sit();  
+		d.bark();  
+		d.eat();  
+	}
+} 
+<br>
+<b>Output:</b>
+sit
+barking
+eating
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+
+
+<div class="container">
+			<div class="row animate-box">
+					
+					<h4><b>Hierarchical Inheritance </b></h4>
+					<div style="align-content:justify; ">
+						<p>
+							HeThe superclass properties and methods can be inherited by multiple subclasses. That means many subclasses can derive the properties of one base class . Class B,C and D inherits the same class A. A is parent class (or base class) of B,C & D.
+							<br>
+							<h3>The general form of hierarchical inheritance is:</h3>
+							<pre>
+Class baseclass
+{
+	……………………..
+}
+Class subclass1 extends baseclass
+{
+	……………………..
+}
+Class subclass2 extends baseclass
+{
+	……………………..
+}
+Class subclass3 extends baseclass
+{
+	……………………..
+}
+
+							</pre>
+							<h3>Example:</h3>
+							<pre>
+class Animal
+{  
+    void eat()
+	{
+		System.out.println("eating");
+	}  
+}  
+class Dog extends Animal
+{  
+    void bark()
+	{
+		System.out.println("barking");
+	}  
+}  
+class Cat extends Animal
+{  
+    void meow()
+	{
+		System.out.println("meowing");
+	}  
+}  
+class TestInheritance3
+{  
+    public static void main(String args[])
+	{  
+   		 Cat c=new Cat();  
+   		 c.meow();  
+   		 c.eat(); 
+    }
+}  
+<br>
+<b>Output:</b>
+meowing
+eating
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+
+
+
+<div class="container">
+			<div class="row animate-box">
+					
+					<h4><b>Multiple Inheritance (Through interface)</b></h4>
+					<div style="align-content:justify; ">
+						<p>
+							In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes. Java does not support multiple inheritances with classes. Multiple inheritance is not supported by Java using classes , handling the complexity that causes due to multiple inheritance is very complex. It creates problem during various operations like casting, constructor chaining etc. In java, we can achieve multiple inheritances only through Interfaces.  Class C is derived from interface A and B.
+							<br>
+							
+							<h3>Example:</h3>
+							<pre>
+interface AnimalEat 
+{
+   void eat();
+}
+interface AnimalTravel 
+{
+   void travel();
+}
+class Animal implements AnimalEat, AnimalTravel 
+{
+   	public void eat()
+ 	{
+      System.out.println("Animal is eating");
+  	}
+   	public void travel()
+ 	{
+      System.out.println("Animal is travelling");
+   	}
+}
+public class Demo
+{
+   	public static void main(String args[]) 
+	{
+      Animal a = new Animal();
+      a.eat();
+   	  a.travel();
+   	}
+}
+
+<br>
+<b>Output:</b>
+Animal is eating
+Animal is travelling
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+
+
+
+<div class="container">
+			<div class="row animate-box">
+					
+					<h4><b>Hybrid Inheritance (Through Interface)</b></h4>
+					<div style="align-content:justify; ">
+						<p>
+							It is a mix of two or more of the above types of inheritance. Since java doesn’t support multiple inheritances with classes, hybrid inheritance is also not possible with classes. In java, one can achieve hybrid inheritance only through Interfaces.
+							<br>
+							
+							<h3>Example:</h3>
+							<pre>
+public class ClassA 
+{
+    public void dispA()
+    {
+        System.out.println("disp() method of ClassA");
+    }
+}
+public interface InterfaceB 
+{
+    public void show();
+}
+public interface InterfaceC 
+{
+    public void show();
+}
+public class ClassD extends ClassA implements InterfaceB,InterfaceC
+{
+    public void show()
+    {
+        System.out.println("show() method implementation");
+    }
+    public void dispD()
+    {
+        System.out.println("disp() method of ClassD");
+    }
+    public static void main(String args[])
+    {
+        ClassD d = new ClassD();
+        d.dispD();
+        d.show();
+    }
+}
+
+
+<br>
+<b>Output:</b>
+disp() method of ClassD
+show() method implementation
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2021 KIIT All Rights Reserved.</small> 
+						<small class="block">Designed by Group-12 IT-G2 KIIT</a></small>
+					</p>
+					
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

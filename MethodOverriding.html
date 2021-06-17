@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Java &mdash; Inheritance In Java</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1">
+						<div id="fh5co-logo"><a href="index.html">ITGR12<span>.</span></a></div>
+					</div>
+					<div class="col-xs-11 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="Basics.html">Basics</a></li>
+							<li><a href="Types.html">Types</a></li>
+							<li class="has-dropdown">
+								<a href="MethodOverriding.html">MethodOverriding</a>
+								<ul class="dropdown">
+									<li><a href="#one">Rules for implementation</a></li>
+									<li><a href="#two">Example</a></li>
+									<li><a href="#three">Super Keyword</a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</li>
+							<li><a href="DynamicMethodDispatch.html">DynamicMethodDispatch</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1><b>Method Overriding</b></h1>
+							<h2>Presented By Group-12 IT-G2<a href="http://freehtml5.co" target="_blank"></a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="fh5co-explore" class="fh5co-bg-section">
+	<div class="container">
+			<div class="row animate-box">
+					
+					<h3><b>Method Overriding</b></h3>
+					<div style="align-content:justify; ">
+						<p>
+							Method Overriding is a feature in java that allows a sub-class to provide a specific implementation of a method that is already provided by one of its super-classes. It is used for runtime polymorphism.
+							<h3 id="one">Rules for implementation</h3>
+							<li>The method must have the same name as in the super-class.</li>
+							<li>The method must have the same parameter as in the super-class.</li>
+							<li>There must be an IS-A relationship (inheritance).</li>
+							<br>
+							
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+
+	<div class="container">
+			<div class="row animate-box">
+					
+					<h3 id="two">Example of Method Overriding:</h3>
+					<div style="align-content:justify; ">
+						<p>
+							In the below program , the run method is defined in both super-class and sub-class but it has a some specific implementation. The name and parameter of the method are the same, and there is IS-A relationship between the classes, so there is method overriding.
+							<br>
+							<pre>
+//Creating a parent class.
+class Vehicle
+{
+	//defining a method
+	void run()
+	{
+		System.out.println("Vehicle is running");
+	}
+}
+//Creating a child class
+class Bike2 extends Vehicle
+{
+	//defining the same method as in the parent class
+	void run()
+	{
+		System.out.println("Bike is running safely");
+	}
+	public static void main(String args[])
+	{
+		Bike2 obj = new Bike2();//creating object
+		obj.run();//calling method
+	}
+}
+<br>
+<b>Output:</b>
+Bike is running safely
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+<div id="fh5co-explore" class="fh5co-bg-section">
+	<div class="container">
+			<div class="row animate-box">
+					
+					<h3 id="three"><b>Super Keyword</b></h3>
+					<div style="align-content:justify; ">
+						<p>
+							The super keyword in Java is a reference variable which is used to refer immediate parent class object. Whenever you create the instance of subclass, an instance of super-class is created implicitly which is referred by super reference variable. The most common use of the super keyword is to eliminate the confusion between super-classes and sub-classes that have methods with the same name.
+							
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+
+	<div class="container">
+			<div class="row animate-box">
+					
+					
+					<div style="align-content:justify; ">
+						<p>
+							The properties and methods of a base class are derived by a subclass and this is called single inheritance . To derive the data members and methods of the baseclass , a subclass uses extends keyword in the class declaration statement. The flow diagram shows that class B extends only one class which is A. Here A is a parent class of B and B would be  a child class of A.
+							<br>
+							<h4><b>Super can be used to refer immediate parent class instance variable</b></h4>
+							
+							<h3>Example:</h3>
+							<p>
+								Here, super keyword is used to access the data member or field of parent class. It is used if parent class and child class have same fields.
+							</p>
+							<pre>
+class Animal
+{  
+	String color="white";  
+}  
+class Dog extends Anima
+{  
+	String color="black";  
+	void printColor()
+	{  
+		System.out.println(color);//prints color of Dog class  
+		System.out.println(super.color);//prints color of Animal class  
+	}  
+}  
+class TestSuper1
+{  
+	public static void main(String args[])
+	{  
+		Dog d=new Dog();  
+		d.printColor();  
+	}	
+}  
+<br>
+<b>Output:</b>
+black 
+white 
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+
+
+<div class="container">
+			<div class="row animate-box">
+					
+					
+					<div style="align-content:justify; ">
+						<p>
+														<br>
+							<h4><b>Super can be used to invoke immediate parent class method</b></h4>
+							
+							<h3>Example:</h3>
+							<p>
+								It can also be used to invoke parent class method. It should be used if subclass contains the same method as parent class. 
+							</p>
+							<pre>
+class Animal
+{  
+	void eat()
+	{
+		System.out.println("eating...");
+	}  
+}  
+class Dog extends Animal
+{  
+	void eat()
+	{
+		System.out.println("eating bread...");
+	}  
+	void bark()
+	{
+		System.out.println("barking...");
+	}  
+	void work()
+	{  
+		super.eat();  
+		bark();  
+	}  
+}  
+class TestSuper2
+{  
+	public static void main(String args[])
+	{  
+			Dog d=new Dog();  
+			d.work();  
+	}
+}  
+
+<br>
+<b>Output:</b>
+eating…
+barking… 
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+
+<div class="container">
+			<div class="row animate-box">
+					
+					
+					<div style="align-content:justify; ">
+						<p>
+							In the above example Animal and Dog both classes have eat() method if we call eat() method from Dog class, it will call the eat() method of Dog class by default because priority is given to local.To call the parent class method, super keyword is used.
+
+							<br>
+							<h4><b>Super is used to invoke super-class constructor</b></h4>
+							
+							<h3>Example:</h3>
+							
+							<pre>
+class Animal
+{  
+	Animal()
+	{
+		System.out.println("animal is created");
+	}  
+}  
+class Dog extends Animal
+{  
+	Dog()
+	{  
+		super();  
+		System.out.println("dog is created");  
+	}  
+}  
+class TestSuper3
+{  
+	public static void main(String args[])
+	{  
+		Dog d=new Dog();  
+	}
+}
+<br>
+<b>Output:</b>
+black 
+white 
+							</pre>
+						</p>
+					</div>
+				
+			</div>
+	</div>
+	
+	<footer id="fh5co-footer" role="contentinfo">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2021 KIIT All Rights Reserved.</small> 
+						<small class="block">Designed by Group-12 IT-G2 KIIT</a></small>
+					</p>
+					
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
